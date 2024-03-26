@@ -1,0 +1,30 @@
+import {readDataFromExcel,readLastRowAndColumn,getLastRow} from '../ExcelUtility/excel.js'
+
+describe("excel single data",async ()=>{
+    let filepath="test/excelfile/abcd.xlsx"
+    it("",async()=>{
+
+        let k=await readDataFromExcel(filepath,"Sheet1",2,2)
+        console.log(k+"??????????????????????????????????????????????????????????????????????????????????")
+    })
+
+
+    it("try1",
+    async () => {
+      const { lastRowIndex, lastColumnIndex } = await readLastRowAndColumn(filepath,"Sheet2");
+      console.log('Last row index:', lastRowIndex);
+      console.log('Last column index:', lastColumnIndex);
+    })
+    it("try2",async ()=>{
+      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+      console.log(await getLastRow(filepath,"Sheet2"))
+
+      
+    })
+   
+})
+
+
+
+
+ 
